@@ -9,4 +9,3 @@ def get_cities():
         for row in d['result']:
             result.append('%s, %s' % (row['City'], row['State']))
     return result
-

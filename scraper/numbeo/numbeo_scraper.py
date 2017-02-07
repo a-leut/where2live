@@ -1,5 +1,4 @@
 import os
-import datetime
 import errno
 import time
 import random
@@ -8,6 +7,7 @@ from selenium.webdriver.common.keys import Keys
 from scraper import rand_wait_for_element
 from scraper.config import NUMBEO_DIR
 from scraper.util import utc_timestamp
+
 
 class NumbeoScraper(object):
     """ Scrapes numbeo.com for cost of living data
@@ -40,7 +40,7 @@ class NumbeoScraper(object):
         # Find which cities are already scraped from log
         with open(self.log_file, 'r') as f:
             log_lines = f.readlines()[2:]
-            scraped_cities = [l.strip() for l in log_lines]
+        scraped_cities = [l.strip() for l in log_lines]
         new_cities = set(target_cities).difference(scraped_cities)
         new_cities.discard('')  # newline not a city
         total_new = len(new_cities)
@@ -71,7 +71,7 @@ class NumbeoScraper(object):
             rand_wait_for_element(b, '//*[@id="dispatch_form"]')
             search_form = b.driver.find_element_by_xpath('//*[@id="city_selector_city_id"]')
             search_form.send_keys(city)
-            time.sleep(4)
+            time.sleep(5)
             search_form.send_keys(Keys.TAB)
             # close signup popup if exists
             try:

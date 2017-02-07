@@ -50,12 +50,13 @@ class NumbeoScraper(object):
             print('Scraping numbeo for {0} - {1}/{2}'.format(
                 target_city, total_new - len(new_cities) + 1, total_new
             ))
-
-            #html = self.get_html_for_city(city)
-            #self.save_page(html, city)
+            html = self.get_html_for_city(target_city)
+            self.save_page(html, target_city)
             with open(self.log_file, 'a') as f:
                 f.write('{0}\n'.format(target_city))
             new_cities.discard(target_city)
+
+            time.sleep(random.randrange(4, 20))
 
         print('All cities scraped, complete!')
 
@@ -70,7 +71,7 @@ class NumbeoScraper(object):
             rand_wait_for_element(b, '//*[@id="dispatch_form"]')
             search_form = b.driver.find_element_by_xpath('//*[@id="city_selector_city_id"]')
             search_form.send_keys(city)
-            time.sleep(3)
+            time.sleep(4)
             search_form.send_keys(Keys.TAB)
             # close signup popup if exists
             try:
@@ -84,6 +85,6 @@ class NumbeoScraper(object):
         filename = '{0}_{1}.html'.format(
            city.replace(',', '').replace(' ', '-'), utc_timestamp()
         )
-        with open(os.path.join(NUMBEO_DIR, filename), 'w') as f:
+        with open(os.path.join(NUMBEO_DIR, filename), 'w', encoding='utf-8') as f:
             f.write(html)
 

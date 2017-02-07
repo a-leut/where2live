@@ -6,13 +6,14 @@ import splinter
 from selenium.webdriver.common.keys import Keys
 from scraper import rand_wait_for_element
 from scraper.config import NUMBEO_DIR
+from scraper.util import utc_timestamp
 
 class NumbeoScraper(object):
     """ Scrapes numbeo.com for cost of living data
     """
-    def __init__(self, browser):
-        self.browser = browser
-        # make sure output dirs are set up
+    def __init__(self, browser_type, force_reset=False):
+        self.t_file = os.path.join(NUMBEO_DIR, 'log.txt')
+        # Make sure output dirs are set up
         try:
             os.makedirs(NUMBEO_DIR)
         except OSError as e:
@@ -20,14 +21,29 @@ class NumbeoScraper(object):
                 pass
             else:
                 raise
+        # Delete tracked file if force reset
+        if force_reset:
+            try:
+                os.remove(self.t_file)
+            except OSError:
+                pass
+        # Create new tracked file if it doesnt exist
+        if not os.path.isfile(self.t_file):
+            with open(self.t_file, 'w') as f:
+                f.write('# Numbeo scrape log\n# Started: {0}\n'.format(utc_timestamp()))
+        self.browser_type = browser_type
 
     def scrape_cities(self, cities):
+        """ Search for list of cities on numbeo and save output to dir
+        """
         for city in cities:
             html = self.get_html_for_city(city)
             self.save_page(html, city)
 
     def get_html_for_city(self, city):
-        with splinter.Browser(self.browser) as b:
+        """ Launch browser, search for cities, and return html
+        """
+        with splinter.Browser(self.browser_type) as b:
             # visit home page
             b.visit('https://www.numbeo.com/cost-of-living/')
             # fill search form with city
@@ -46,9 +62,7 @@ class NumbeoScraper(object):
 
     def save_page(self, html, city):
         filename = '{0}_{1}.html'.format(
-           city.replace(',', '').replace(' ', '-'),
-            # timestamp in UTC
-           datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d_%H-%M-%S')
+           city.replace(',', '').replace(' ', '-'), utc_timestamp()
         )
         with open(os.path.join(NUMBEO_DIR, filename), 'w') as f:
             f.write(html)

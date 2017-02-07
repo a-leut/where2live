@@ -16,7 +16,7 @@ def load_cities(file):
 
 def main():
     cities = load_cities(CITIES_FILE)
-    scraper = NumbeoScraper()
+    scraper = NumbeoScraper('chrome')
     scraper.scrape_cities(cities)
 
 if __name__ == '__main__':

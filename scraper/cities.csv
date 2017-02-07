@@ -1,0 +1,305 @@
+City,State[5]
+New York[6],New York
+Los Angeles,California
+Chicago,Illinois
+Houston[7],Texas
+Philadelphia[8],Pennsylvania
+Phoenix,Arizona
+San Antonio,Texas
+San Diego,California
+Dallas,Texas
+San Jose,California
+Austin,Texas
+Jacksonville[9],Florida
+San Francisco[10],California
+Indianapolis[11],Indiana
+Columbus,Ohio
+Fort Worth,Texas
+Charlotte,North Carolina
+Seattle,Washington
+Denver[12],Colorado
+El Paso,Texas
+Detroit,Michigan
+Washington[13],District of Columbia
+Boston,Massachusetts
+Memphis,Tennessee
+Nashville[14],Tennessee
+Portland,Oregon
+Oklahoma City,Oklahoma
+Las Vegas,Nevada
+Baltimore[15],Maryland
+Louisville[16],Kentucky
+Milwaukee,Wisconsin
+Albuquerque,New Mexico
+Tucson,Arizona
+Fresno,California
+Sacramento,California
+Kansas City,Missouri
+Long Beach,California
+Mesa,Arizona
+Atlanta,Georgia
+Colorado Springs,Colorado
+Virginia Beach[15],Virginia
+Raleigh,North Carolina
+Omaha,Nebraska
+Miami,Florida
+Oakland,California
+Minneapolis,Minnesota
+Tulsa,Oklahoma
+Wichita,Kansas
+New Orleans[17],Louisiana
+Arlington,Texas
+Cleveland,Ohio
+Bakersfield,California
+Tampa,Florida
+Aurora,Colorado
+Honolulu[2],Hawai'i
+Anaheim,California
+Santa Ana,California
+Corpus Christi,Texas
+Riverside,California
+St. Louis[15],Missouri
+Lexington[18],Kentucky
+Stockton,California
+Pittsburgh,Pennsylvania
+Saint Paul,Minnesota
+Anchorage[19],Alaska
+Cincinnati,Ohio
+Henderson,Nevada
+Greensboro,North Carolina
+Plano,Texas
+Newark,New Jersey
+Toledo,Ohio
+Lincoln,Nebraska
+Orlando,Florida
+Chula Vista,California
+Jersey City,New Jersey
+Chandler,Arizona
+Fort Wayne,Indiana
+Buffalo,New York
+Durham,North Carolina
+St. Petersburg,Florida
+Irvine,California
+Laredo,Texas
+Lubbock,Texas
+Madison,Wisconsin
+Gilbert[20],Arizona
+Norfolk[15],Virginia
+Reno,Nevada
+Winston–Salem,North Carolina
+Glendale,Arizona
+Hialeah,Florida
+Garland,Texas
+Scottsdale,Arizona
+Irving,Texas
+Chesapeake[15],Virginia
+North Las Vegas,Nevada
+Fremont,California
+Baton Rouge[21],Louisiana
+Richmond[15],Virginia
+Boise[22],Idaho
+San Bernardino,California
+Spokane,Washington
+Birmingham,Alabama
+Modesto,California
+Des Moines,Iowa
+Rochester,New York
+Tacoma,Washington
+Fontana,California
+Oxnard,California
+Moreno Valley,California
+Fayetteville,North Carolina
+Huntington Beach,California
+Yonkers,New York
+Glendale,California
+Aurora,Illinois
+Montgomery,Alabama
+Columbus[23],Georgia
+Amarillo,Texas
+Little Rock,Arkansas
+Akron,Ohio
+Shreveport,Louisiana
+Augusta[24],Georgia
+Grand Rapids,Michigan
+Mobile,Alabama
+Salt Lake City,Utah
+Huntsville,Alabama
+Tallahassee,Florida
+Grand Prairie,Texas
+Overland Park,Kansas
+Knoxville,Tennessee
+Worcester,Massachusetts
+Brownsville,Texas
+Newport News[15],Virginia
+Santa Clarita,California
+Port St. Lucie,Florida
+Providence,Rhode Island
+Fort Lauderdale,Florida
+Chattanooga,Tennessee
+Tempe,Arizona
+Oceanside,California
+Garden Grove,California
+Rancho Cucamonga,California
+Cape Coral,Florida
+Santa Rosa,California
+Vancouver,Washington
+Sioux Falls,South Dakota
+Peoria,Arizona
+Ontario,California
+Jackson,Mississippi
+Elk Grove,California
+Springfield,Missouri
+Pembroke Pines,Florida
+Salem,Oregon
+Corona,California
+Eugene,Oregon
+McKinney,Texas
+Fort Collins,Colorado
+Lancaster,California
+Cary[25],North Carolina
+Palmdale,California
+Hayward,California
+Salinas,California
+Frisco,Texas
+Springfield,Massachusetts
+Pasadena,Texas
+Macon[26],Georgia
+Alexandria[15],Virginia
+Pomona,California
+Lakewood,Colorado
+Sunnyvale,California
+Escondido,California
+Kansas City[27],Kansas
+Hollywood,Florida
+Clarksville,Tennessee
+Torrance,California
+Rockford,Illinois
+Joliet,Illinois
+Paterson,New Jersey
+Bridgeport,Connecticut
+Naperville,Illinois
+Savannah,Georgia
+Mesquite,Texas
+Syracuse,New York
+Pasadena,California
+Orange,California
+Fullerton,California
+Killeen,Texas
+Dayton,Ohio
+McAllen,Texas
+Bellevue,Washington
+Miramar,Florida
+Hampton[15],Virginia
+West Valley City,Utah
+Warren,Michigan
+Olathe,Kansas
+Columbia,South Carolina
+Thornton,Colorado
+Carrollton,Texas
+Midland,Texas
+Charleston,South Carolina
+Waco,Texas
+Sterling Heights,Michigan
+Denton,Texas
+Cedar Rapids,Iowa
+New Haven,Connecticut
+Roseville,California
+Gainesville,Florida
+Visalia,California
+Coral Springs,Florida
+Thousand Oaks,California
+Elizabeth,New Jersey
+Stamford,Connecticut
+Concord,California
+Surprise,Arizona
+Lafayette[28],Louisiana
+Topeka,Kansas
+Kent,Washington
+Simi Valley,California
+Santa Clara,California
+Murfreesboro,Tennessee
+Hartford,Connecticut
+Athens[29],Georgia
+Victorville,California
+Abilene,Texas
+Vallejo,California
+Berkeley,California
+Norman,Oklahoma
+Allentown,Pennsylvania
+Evansville,Indiana
+Columbia,Missouri
+Odessa,Texas
+Fargo,North Dakota
+Beaumont,Texas
+Independence,Missouri
+Ann Arbor,Michigan
+El Monte,California
+Springfield,Illinois
+Round Rock,Texas
+Wilmington,North Carolina
+Arvada,Colorado
+Provo,Utah
+Peoria,Illinois
+Lansing,Michigan
+Downey,California
+Carlsbad,California
+Costa Mesa,California
+Miami Gardens,Florida
+Westminster,Colorado
+Clearwater,Florida
+Fairfield,California
+Rochester,Minnesota
+Elgin,Illinois
+Temecula,California
+West Jordan,Utah
+Inglewood,California
+Richardson,Texas
+Lowell,Massachusetts
+Gresham,Oregon
+Antioch,California
+Cambridge,Massachusetts
+High Point,North Carolina
+Billings,Montana
+Manchester,New Hampshire
+Murrieta,California
+Centennial,Colorado
+Richmond,California
+Ventura[30],California
+Pueblo,Colorado
+Pearland,Texas
+Waterbury,Connecticut
+West Covina,California
+North Charleston,South Carolina
+Everett,Washington
+College Station,Texas
+Palm Bay,Florida
+Pompano Beach,Florida
+Boulder,Colorado
+Norwalk,California
+West Palm Beach,Florida
+Broken Arrow,Oklahoma
+Daly City,California
+Sandy Springs,Georgia
+Burbank,California
+Green Bay,Wisconsin
+Santa Maria,California
+Wichita Falls,Texas
+Lakeland,Florida
+Clovis,California
+Lewisville,Texas
+Tyler,Texas
+El Cajon,California
+San Mateo,California
+Rialto,California
+Edison[31],New Jersey
+Davenport,Iowa
+Hillsboro,Oregon
+Woodbridge[31],New Jersey
+Las Cruces,New Mexico
+South Bend,Indiana
+Vista,California
+Greeley,Colorado
+Davie[32],Florida
+San Angelo,Texas
+Jurupa Valley,California
+Renton,Washington

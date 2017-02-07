@@ -1,7 +1,8 @@
 # pycharm
 .idea/
 .pipeline/
-.data/
+data/
+ghostdriver.log
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -5,9 +5,8 @@ import random
 import splinter
 from selenium.webdriver.common.keys import Keys
 from scraper import rand_wait_for_element
-from scraper.config import NUMBEO_DIR
 from scraper.util import utc_timestamp
-from scraper.config import CITIES_FILE
+from scraper.config import CITIES_FILE, NUMBEO_DIR
 
 
 class NumbeoScraper(object):
@@ -66,20 +65,20 @@ class NumbeoScraper(object):
         """ Launch browser, search for cities, and return html
         """
         with splinter.Browser(self.browser_type) as b:
-            # visit home page
+            # Visit home page
             b.visit('https://www.numbeo.com/cost-of-living/')
-            # fill search form with city
+            # Fill search form with city
             rand_wait_for_element(b, '//*[@id="dispatch_form"]')
             search_form = b.driver.find_element_by_xpath('//*[@id="city_selector_city_id"]')
             search_form.send_keys(city)
             time.sleep(5)
             search_form.send_keys(Keys.TAB)
-            # close signup popup if exists
+            # Close signup popup if exists
             try:
                 b.find_by_xpath('/html/body/div[6]/div[1]/button').first.click()
             except splinter.exceptions.ElementDoesNotExist:
                 pass
-            # return search result
+            # Return search result
             return str(b.html)
 
     def save_page(self, html, city):
@@ -91,7 +90,6 @@ class NumbeoScraper(object):
 
 
 def main():
-    # load cities
     with open(CITIES_FILE, 'r') as f:
         cities = f.read().split('\n')[1:]
     scraper = NumbeoScraper('phantomjs')

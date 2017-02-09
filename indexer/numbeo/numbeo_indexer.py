@@ -7,7 +7,7 @@ from indexer.util import rand_wait_for_element
 
 
 class NumbeoIndexer(ItemIndexer):
-    """ Scrapes numbeo.com for cost of living data
+    """ Indexes numbeo.com for cost of living data
     """
     def get_html_for_item(self, item):
         """ Launch browser, search for item (a city) on numbeo, and return html

@@ -1,1 +1,1 @@
-from .glassdoor_scraper import GlassdoorScraper
+from .glassdoor_indexer import GlassdoorScraper

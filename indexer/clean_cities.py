@@ -1,3 +1,6 @@
+""" Cleans a list of most populous cities copied from wikipedia for use as
+    terms
+"""
 import re
 
 lines = []

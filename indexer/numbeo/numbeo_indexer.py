@@ -1,9 +1,9 @@
 import time
 import splinter
 from selenium.webdriver.common.keys import Keys
-from scraper.settings import CITIES_FILE, NUMBEO_DIR
-from scraper.item_indexer import ItemIndexer
-from scraper.util import rand_wait_for_element
+from indexer.settings import CITIES_FILE, NUMBEO_DIR
+from indexer.item_indexer import ItemIndexer
+from indexer.util import rand_wait_for_element
 
 
 class NumbeoIndexer(ItemIndexer):

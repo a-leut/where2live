@@ -2,7 +2,7 @@ import os
 import pandas as pd
 from tqdm import tqdm
 from bs4 import BeautifulSoup
-from scraper.settings import NUMBEO_DIR
+from indexer.settings import NUMBEO_DIR
 
 
 def parse_cost_index(document_path):

@@ -2,7 +2,7 @@ import os
 import errno
 import random
 import time
-from scraper.util import utc_timestamp
+from indexer.util import utc_timestamp
 
 
 class ItemIndexer(object):

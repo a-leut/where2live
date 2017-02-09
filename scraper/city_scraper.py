@@ -1,24 +1,19 @@
 import os
 import errno
-import time
-import random
-import splinter
-from selenium.webdriver.common.keys import Keys
-from scraper import rand_wait_for_element
 from scraper.util import utc_timestamp
-from scraper.settings import CITIES_FILE, NUMBEO_DIR
 
 
-class NumbeoScraper(object):
+class CityScraper(object):
     """ Scrapes numbeo.com for cost of living data
     """
-    def __init__(self, browser_type, force_reset=False):
-        self.log_file = os.path.join(NUMBEO_DIR, 'log.txt')
+    N
+    def __init__(self, browser_type, log_dir, force_reset=False):
+        self.log_file = os.path.join(log_dir, 'log.txt')
         # Make sure output dirs are set up
         try:
-            os.makedirs(NUMBEO_DIR)
+            os.makedirs(log_dir)
         except OSError as e:
-            if e.errno == errno.EEXIST and os.path.isdir(NUMBEO_DIR):
+            if e.errno == errno.EEXIST and os.path.isdir(log_dir):
                 pass
             else:
                 raise
@@ -87,13 +82,3 @@ class NumbeoScraper(object):
         )
         with open(os.path.join(NUMBEO_DIR, filename), 'w', encoding='utf-8') as f:
             f.write(html)
-
-
-def main():
-    with open(CITIES_FILE, 'r') as f:
-        cities = f.read().split('\n')[1:]
-    scraper = NumbeoScraper('phantomjs')
-    scraper.scrape_cities(cities)
-
-if __name__ == '__main__':
-    main()

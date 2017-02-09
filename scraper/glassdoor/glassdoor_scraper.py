@@ -19,4 +19,3 @@ class GlassdoorScraper(object):
 
             search_box = browser.find_by_xpath('//*[@id="sc.location"]')
             search_box.click()
-            #browser.click()

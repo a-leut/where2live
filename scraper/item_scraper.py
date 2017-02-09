@@ -35,7 +35,7 @@ class ItemScraper(object):
                 f.write('# {0} scrape log\n# Started: {1}\n'.
                         format(self.__class__.__name__, utc_timestamp()))
 
-    def scrape_cities(self, target_items):
+    def scrape_items(self, target_items):
         """ Search for list of cities on numbeo and save output to dir
         """
         # Find which cities are already scraped from log
@@ -64,15 +64,16 @@ class ItemScraper(object):
 
     def save_page(self, html, item):
         filename = '{0}_{1}.html'.format(
-            item.replace(',', '').replace(' ', '-'), utc_timestamp()
+            self.clean_item_name(item), utc_timestamp()
         )
-        with open(os.path.join(self.base_dir, filename), 'w', encoding='utf-8') as f:
-            f.write(html)
+        p = os.path.join(self.base_dir, filename)
+        with open(p, 'w', encoding='utf-8') as out:
+            out.write(html)
 
     def clean_item_name(self, item_name):
         """" Cleans an item name to be used as a filename
         """
-        return item_name
+        return item_name.replace(',', '').replace(' ', '-')
 
     def get_html_for_item(self, item):
         """ Launch browser, get page for item and, and return html

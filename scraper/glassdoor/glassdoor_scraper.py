@@ -1,5 +1,6 @@
 from splinter import Browser
 
+
 class GlassdoorScraper(object):
     """ Scrapes data from glassdoor.com website
     """

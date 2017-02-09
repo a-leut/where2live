@@ -5,7 +5,7 @@ import time
 from scraper.util import utc_timestamp
 
 
-class ItemScraper(object):
+class ItemIndexer(object):
     """ Base class to index a website and download some html pages. Enumerates
         an input list and runs some action per input.
     """
@@ -35,10 +35,10 @@ class ItemScraper(object):
                 f.write('# {0} scrape log\n# Started: {1}\n'.
                         format(self.__class__.__name__, utc_timestamp()))
 
-    def scrape_items(self, target_items):
-        """ Search for list of cities on numbeo and save output to dir
+    def index_items(self, target_items):
+        """ Search for list of items on a site and save output to dir
         """
-        # Find which cities are already scraped from log
+        # Find which items are already indexed from log
         with open(self.log_file, 'r') as f:
             log_lines = f.readlines()[2:]
         scraped_items = [l.strip() for l in log_lines]

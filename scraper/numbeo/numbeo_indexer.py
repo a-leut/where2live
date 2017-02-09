@@ -2,11 +2,11 @@ import time
 import splinter
 from selenium.webdriver.common.keys import Keys
 from scraper.settings import CITIES_FILE, NUMBEO_DIR
-from scraper.item_scraper import ItemScraper
+from scraper.item_indexer import ItemIndexer
 from scraper.util import rand_wait_for_element
 
 
-class NumbeoScraper(ItemScraper):
+class NumbeoIndexer(ItemIndexer):
     """ Scrapes numbeo.com for cost of living data
     """
     def get_html_for_item(self, item):
@@ -33,8 +33,8 @@ class NumbeoScraper(ItemScraper):
 def main():
     with open(CITIES_FILE, 'r') as f:
         cities = f.read().split('\n')[1:]
-    scraper = NumbeoScraper('phantomjs', NUMBEO_DIR)
-    scraper.scrape_items(cities)
+    idx = NumbeoIndexer('phantomjs', NUMBEO_DIR)
+    idx.index_items(cities)
 
 if __name__ == '__main__':
     main()

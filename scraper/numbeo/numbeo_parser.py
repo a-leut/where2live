@@ -6,6 +6,9 @@ from scraper.settings import NUMBEO_DIR
 
 
 def parse_cost_index(document_path):
+    """ Returns a list containing cost of living data from a numbeo.com html
+        file
+    """
     with open(document_path, 'r', encoding='utf-8') as f:
         doc = f.read()
     soup = BeautifulSoup(doc, 'html.parser')
@@ -25,6 +28,8 @@ def parse_cost_index(document_path):
 
 
 def parse_all():
+    """ Parses all the HTML files in the numbeo directory
+    """
     data = []
     print('Parsing cost indices...')
     for path in tqdm(os.listdir(NUMBEO_DIR)):

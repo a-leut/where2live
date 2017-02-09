@@ -32,7 +32,7 @@ class ItemIndexer(object):
         # Create new tracked log if it doesnt exist
         if not os.path.isfile(self.log_file):
             with open(self.log_file, 'w') as f:
-                f.write('# {0} scrape log\n# Started: {1}\n'.
+                f.write('# {0} log\n# Started: {1}\n'.
                         format(self.__class__.__name__, utc_timestamp()))
 
     def index_items(self, target_items):
@@ -41,8 +41,8 @@ class ItemIndexer(object):
         # Find which items are already indexed from log
         with open(self.log_file, 'r') as f:
             log_lines = f.readlines()[2:]
-        scraped_items = [l.strip() for l in log_lines]
-        new_items = set(target_items).difference(scraped_items)
+        indexed_indems = [l.strip() for l in log_lines]
+        new_items = set(target_items).difference(indexed_indems)
         new_items.discard('')  # newline not a city
         total_new = len(new_items)
         while len(new_items) > 0:
@@ -60,7 +60,7 @@ class ItemIndexer(object):
             new_items.discard(new_item)
             # Wait patiently to re-index
             time.sleep(random.randrange(4, 20))
-        print('All items scraped, complete!')
+        print('All items indexed, complete!')
 
     def save_page(self, html, item):
         filename = '{0}_{1}.html'.format(

@@ -1,3 +1,4 @@
+import time
 from splinter import Browser
 from indexer.settings import CITIES_FILE, GLASSDOOR_DIR
 from indexer.item_indexer import ItemIndexer
@@ -10,11 +11,13 @@ class GlassdoorIndexer(ItemIndexer):
     def get_html_for_item(self, item):
         """ Scrapes the site for an item (city) and stores the result page
         """
-        with Browser(self.browser_type) as browser:
+        with Browser('chrome') as browser:
+            job, city = 'Nurse', 'Denver'#item
             browser.visit('https://www.glassdoor.com/Salaries/')
-
-            search_box = browser.find_by_xpath('//*[@id="sc.location"]')
-            search_box.click()
+            browser.type('sc.keyword', item)
+            button = browser.find_by_id('HeroSearchButton')
+            button.click()
+            time.sleep(5)
 
 
 def main():

@@ -12,13 +12,15 @@ class GlassdoorIndexer(ItemIndexer):
     def get_html_for_item(self, item):
         """ Scrapes the site for an item (city) and stores the result page
         """
-        with Browser('phantomjs') as browser:
+        with Browser('chrome') as browser:
             job = 'Software Engineer'
             #job, city = 'Nurse', 'Denver'#item
+            # browser.driver.set_window_size(1600, 900)
+
             browser.visit('https://www.glassdoor.com/Salaries/')
             city_box = browser.find_by_id('LocationSearch')
-            #for _ in range(15):
-            #    city_box.type(Keys.BACKSPACE)
+            for _ in range(15):
+                city_box.type(Keys.BACKSPACE)
             city_box.type(item)
             time.sleep(1)
             browser.type('sc.keyword', job)
